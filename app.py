@@ -20,7 +20,13 @@ if COOKIES_TEXT:
 
 
 def base_opts():
-    opts = {"quiet": True, "no_warnings": True, "noplaylist": True}
+    opts = {
+        "quiet": True,
+        "no_warnings": True,
+        "noplaylist": True,
+        "js_runtimes": {"deno": {}},
+        "remote_components": ["ejs:github"],
+    }
     if COOKIES_PATH:
         opts["cookiefile"] = COOKIES_PATH
     return opts
