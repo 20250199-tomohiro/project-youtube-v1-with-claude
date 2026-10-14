@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ytdlp-web
+    runtime: docker
+    plan: free
+    # ログインが必要な動画用(任意): ダッシュボードで cookies.txt の中身を設定
+    envVars:
+      - key: YTDLP_COOKIES
+        sync: false
